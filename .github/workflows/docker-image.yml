@@ -26,4 +26,4 @@ jobs:
       run: docker build . --file Dockerfile --tag lcasale/docker-cloudberry-backup:${{ github.ref_name }}-$(date +%s)
 
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/docker-cloudberry-backup
+      run: docker push ${{secrets.DOCKER_USER}}/docker-cloudberry-backup:${{ github.ref_name }}-$(date +%s)
